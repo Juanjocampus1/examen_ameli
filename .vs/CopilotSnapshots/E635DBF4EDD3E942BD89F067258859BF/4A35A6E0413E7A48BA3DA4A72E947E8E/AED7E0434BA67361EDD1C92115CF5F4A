@@ -1,0 +1,74 @@
+﻿@model List<Examen_DEWES_JuanJose_acebedo_lara2.Models.Dto.VentaDTO>
+
+@{
+    ViewData["Title"] = "Ventas";
+}
+
+<h2>Listado de Ventas</h2>
+
+<div style="margin-bottom: 20px;">
+    <a href="@Url.Action("Create")" style="padding: 8px 15px; background: #007bff; color: white; text-decoration: none; border-radius: 3px;">Añadir Nueva Venta</a>
+</div>
+
+<div style="margin-bottom: 20px;">
+    <form method="get" action="@Url.Action("Index")">
+        <label>Filtrar por producto:</label>
+        <select name="filtro" style="padding: 5px; margin-left: 10px;">
+            <option value="">Todos</option>
+            @foreach (var producto in ViewBag.Productos)
+            {
+                @if (producto == ViewBag.FiltroActual)
+                {
+                    <option value="@producto" selected>@producto</option>
+                }
+                else
+                {
+                    <option value="@producto">@producto</option>
+                }
+            }
+        </select>
+        <button type="submit" style="padding: 5px 15px; margin-left: 10px;">Filtrar</button>
+        @if (!string.IsNullOrEmpty(ViewBag.FiltroActual))
+        {
+            <a href="@Url.Action("Index")" style="margin-left: 10px;">Limpiar filtro</a>
+        }
+    </form>
+</div>
+
+@if (TempData["Mensaje"] != null)
+{
+    <div style="padding: 10px; background: #d4edda; border: 1px solid #c3e6cb; color: #155724; margin-bottom: 15px;">
+        @TempData["Mensaje"]
+    </div>
+}
+
+@if (TempData["Error"] != null)
+{
+    <div style="padding: 10px; background: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; margin-bottom: 15px;">
+        @TempData["Error"]
+    </div>
+}
+
+<table style="width: 100%; border-collapse: collapse;">
+    <thead>
+        <tr style="background: #f8f9fa;">
+            <th style="border: 1px solid #ddd; padding: 8px;">ID</th>
+            <th style="border: 1px solid #ddd; padding: 8px;">Producto</th>
+            <th style="border: 1px solid #ddd; padding: 8px;">Cantidad</th>
+            <th style="border: 1px solid #ddd; padding: 8px;">Precio</th>
+            <th style="border: 1px solid #ddd; padding: 8px;">Subtotal</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var venta in Model)
+        {
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 8px;">@venta.Id_venta</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">@venta.Producto</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">@venta.Cantidad</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">@venta.Precio.ToString("F2") €</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">@venta.Subtotal.ToString("F2") €</td>
+            </tr>
+        }
+    </tbody>
+</table>

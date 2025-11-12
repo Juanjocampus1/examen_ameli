@@ -1,0 +1,41 @@
+@model Examen_DEWES_JuanJose_acebedo_lara2.Models.Dto.VentaDTO
+
+@{
+    ViewData["Title"] = "Nueva Venta";
+}
+
+<h2>Registrar Nueva Venta</h2>
+
+@if (TempData["Error"] != null)
+{
+    <div>
+@TempData["Error"]
+    </div>
+}
+
+<form method="post" action="@Url.Action("Create")">
+  @Html.AntiForgeryToken()
+    
+    <div>
+        <label>Producto:</label><br />
+        <input type="text" name="Producto" value="@Model?.Producto" required />
+        <span>@Html.ValidationMessageFor(m => m.Producto)</span>
+    </div>
+
+  <div>
+   <label>Cantidad:</label><br />
+      <input type="number" name="Cantidad" value="@Model?.Cantidad" required min="1" />
+        <span>@Html.ValidationMessageFor(m => m.Cantidad)</span>
+   </div>
+
+    <div>
+  <label>Precio:</label><br />
+ <input type="number" name="Precio" value="@Model?.Precio" required step="0.01" min="0.01" />
+        <span>@Html.ValidationMessageFor(m => m.Precio)</span>
+ </div>
+
+    <div>
+  <button type="submit">Guardar</button>
+        <a href="@Url.Action("Index")">Cancelar</a>
+ </div>
+</form>

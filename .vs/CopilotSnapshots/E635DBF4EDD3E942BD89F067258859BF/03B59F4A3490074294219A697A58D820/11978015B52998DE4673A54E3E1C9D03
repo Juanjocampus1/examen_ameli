@@ -1,0 +1,135 @@
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using Examen_DEWES_JuanJose_acebedo_lara2.Data.Repositorios;
+using Examen_DEWES_JuanJose_acebedo_lara2.Models.Dto;
+using Examen_DEWES_JuanJose_acebedo_lara2.Models.Entity;
+
+namespace Examen_DEWES_JuanJose_acebedo_lara2.Servicios
+{
+    public class VentaService
+    {
+        private readonly IVentaRepository _repositorio;
+        private const int STOCK_MINIMO = 10;
+
+        public VentaService(IVentaRepository repositorio)
+        {
+            _repositorio = repositorio;
+        }
+
+        // ---- LISTAR ----
+        public List<VentaDTO> Listar()
+        {
+            var productos = _repositorio.Listar();
+
+            return productos.Select(p => new VentaDTO
+            {
+                IdProducto = p.IdProducto,
+                Nombre = p.Nombre,
+                Medida = p.Medida,
+                Precio = p.Precio,
+                Stock = p.Stock,
+                IdCategoria = p.IdCategoria,
+                NombreCategoria = p.Categoria != null ? p.Categoria.Nombre : ""
+            }).ToList();
+        }
+
+        public List<VentaDTO> ListarPorProducto(string producto)
+        {
+            var ventas = _repositorio.ListarPorProducto(producto);
+            return ventas.Select(v => new VentaDTO
+            {
+                IdProducto = v.Id_venta,
+                Nombre = v.Producto,
+                Precio = v.Precio
+            }).ToList();
+        }
+
+        // ---- OBTENER POR ID ----
+        public VentaDTO? ObtenerPorId(int id)
+        {
+            var producto = _repositorio.ObtenerPorId(id);
+            if (producto == null) return null;
+
+            return new VentaDTO
+            {
+                IdProducto = producto.IdProducto,
+                Nombre = producto.Nombre,
+                Medida = producto.Medida,
+                Precio = producto.Precio,
+                Stock = producto.Stock,
+                IdCategoria = producto.IdCategoria,
+                NombreCategoria = producto.Categoria != null ? producto.Categoria.Nombre : ""
+            };
+        }
+
+        // ---- CREAR ----
+        public (bool exito, string mensaje) Crear(VentaDTO dto)
+        {
+            int stockActual = _repositorio.ObtenerStockPorProducto(dto.Producto);
+
+            if (stockActual < STOCK_MINIMO)
+            {
+                return (false, $"Stock insuficiente. Stock actual: {stockActual}");
+            }
+
+            var nuevo = new Venta
+            {
+                Producto = dto.Producto,
+                Cantidad = dto.Cantidad,
+                Precio = dto.Precio
+            };
+
+            _repositorio.Crear(nuevo);
+            return (true, "Venta creada correctamente");
+        }
+
+        // ---- EDITAR ----
+        public void Editar(VentaDTO dto)
+        {
+            var producto = new Venta
+            {
+                IdProducto = dto.IdProducto,
+                Nombre = dto.Nombre,
+                Medida = dto.Medida,
+                Precio = dto.Precio,
+                Stock = dto.Stock,
+                IdCategoria = dto.IdCategoria
+            };
+
+            _repositorio.Editar(producto);
+        }
+
+        // ---- ELIMINAR ----
+        public void Eliminar(int id)
+        {
+            _repositorio.Eliminar(id);
+        }
+
+        // ---- OBTENER CATEGORÍAS ----
+        public List<SelectListItem> ObtenerCategorias()
+        {
+            var categorias = _repositorio.ListarCategorias();
+
+            return categorias.Select(c => new SelectListItem
+            {
+                Value = c.IdCategoria.ToString(),
+                Text = c.Nombre
+            }).ToList();
+        }
+
+        // ---- OBTENER SIGUIENTE ID ----
+        public int ObtenerSiguienteId()
+        {
+            int ultimoId = _repositorio.ObtenerUltimoId();
+            return ultimoId + 1;
+        }
+
+        public List<string> ObtenerProductos()
+        {
+            return _repositorio.Listar()
+                .Select(v => v.Producto)
+                .Distinct()
+                .OrderBy(p => p)
+                .ToList();
+        }
+    }
+}

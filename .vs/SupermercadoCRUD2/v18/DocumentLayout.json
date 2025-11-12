@@ -1,0 +1,257 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\CampusFP\\Desktop\\SupermercadoCRUD2\\SupermercadoCRUD2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1CAA19EA-F085-68DE-8390-620B6C7F12AF}|SupermercadoCRUD2.csproj|c:\\users\\campusfp\\desktop\\supermercadocrud2\\supermercadocrud2\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1CAA19EA-F085-68DE-8390-620B6C7F12AF}|SupermercadoCRUD2.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CAA19EA-F085-68DE-8390-620B6C7F12AF}|SupermercadoCRUD2.csproj|c:\\users\\campusfp\\desktop\\supermercadocrud2\\supermercadocrud2\\views\\venta\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1CAA19EA-F085-68DE-8390-620B6C7F12AF}|SupermercadoCRUD2.csproj|solutionrelative:views\\venta\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CAA19EA-F085-68DE-8390-620B6C7F12AF}|SupermercadoCRUD2.csproj|c:\\users\\campusfp\\desktop\\supermercadocrud2\\supermercadocrud2\\views\\venta\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1CAA19EA-F085-68DE-8390-620B6C7F12AF}|SupermercadoCRUD2.csproj|solutionrelative:views\\venta\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CAA19EA-F085-68DE-8390-620B6C7F12AF}|SupermercadoCRUD2.csproj|c:\\users\\campusfp\\desktop\\supermercadocrud2\\supermercadocrud2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CAA19EA-F085-68DE-8390-620B6C7F12AF}|SupermercadoCRUD2.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CAA19EA-F085-68DE-8390-620B6C7F12AF}|SupermercadoCRUD2.csproj|c:\\users\\campusfp\\desktop\\supermercadocrud2\\supermercadocrud2\\controllers\\ventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CAA19EA-F085-68DE-8390-620B6C7F12AF}|SupermercadoCRUD2.csproj|solutionrelative:controllers\\ventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CAA19EA-F085-68DE-8390-620B6C7F12AF}|SupermercadoCRUD2.csproj|c:\\users\\campusfp\\desktop\\supermercadocrud2\\supermercadocrud2\\models\\entity\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CAA19EA-F085-68DE-8390-620B6C7F12AF}|SupermercadoCRUD2.csproj|solutionrelative:models\\entity\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CAA19EA-F085-68DE-8390-620B6C7F12AF}|SupermercadoCRUD2.csproj|c:\\users\\campusfp\\desktop\\supermercadocrud2\\supermercadocrud2\\data\\repositorios\\ventarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CAA19EA-F085-68DE-8390-620B6C7F12AF}|SupermercadoCRUD2.csproj|solutionrelative:data\\repositorios\\ventarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CAA19EA-F085-68DE-8390-620B6C7F12AF}|SupermercadoCRUD2.csproj|c:\\users\\campusfp\\desktop\\supermercadocrud2\\supermercadocrud2\\models\\dto\\ventadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CAA19EA-F085-68DE-8390-620B6C7F12AF}|SupermercadoCRUD2.csproj|solutionrelative:models\\dto\\ventadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CAA19EA-F085-68DE-8390-620B6C7F12AF}|SupermercadoCRUD2.csproj|c:\\users\\campusfp\\desktop\\supermercadocrud2\\supermercadocrud2\\servicios\\ventaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CAA19EA-F085-68DE-8390-620B6C7F12AF}|SupermercadoCRUD2.csproj|solutionrelative:servicios\\ventaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CAA19EA-F085-68DE-8390-620B6C7F12AF}|SupermercadoCRUD2.csproj|c:\\users\\campusfp\\desktop\\supermercadocrud2\\supermercadocrud2\\data\\repositorios\\iventarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CAA19EA-F085-68DE-8390-620B6C7F12AF}|SupermercadoCRUD2.csproj|solutionrelative:data\\repositorios\\iventarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CAA19EA-F085-68DE-8390-620B6C7F12AF}|SupermercadoCRUD2.csproj|c:\\users\\campusfp\\desktop\\supermercadocrud2\\supermercadocrud2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1CAA19EA-F085-68DE-8390-620B6C7F12AF}|SupermercadoCRUD2.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CAA19EA-F085-68DE-8390-620B6C7F12AF}|SupermercadoCRUD2.csproj|c:\\users\\campusfp\\desktop\\supermercadocrud2\\supermercadocrud2\\data\\ventacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CAA19EA-F085-68DE-8390-620B6C7F12AF}|SupermercadoCRUD2.csproj|solutionrelative:data\\ventacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CAA19EA-F085-68DE-8390-620B6C7F12AF}|SupermercadoCRUD2.csproj|c:\\users\\campusfp\\desktop\\supermercadocrud2\\supermercadocrud2\\views\\venta\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1CAA19EA-F085-68DE-8390-620B6C7F12AF}|SupermercadoCRUD2.csproj|solutionrelative:views\\venta\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\CampusFP\\Desktop\\SupermercadoCRUD2\\SupermercadoCRUD2\\Views\\Venta\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Venta\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\CampusFP\\Desktop\\SupermercadoCRUD2\\SupermercadoCRUD2\\Views\\Venta\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Venta\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-12T09:33:36.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\CampusFP\\Desktop\\SupermercadoCRUD2\\SupermercadoCRUD2\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\CampusFP\\Desktop\\SupermercadoCRUD2\\SupermercadoCRUD2\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-12T09:25:59.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\CampusFP\\Desktop\\SupermercadoCRUD2\\SupermercadoCRUD2\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\CampusFP\\Desktop\\SupermercadoCRUD2\\SupermercadoCRUD2\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T09:25:36.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\CampusFP\\Desktop\\SupermercadoCRUD2\\SupermercadoCRUD2\\Views\\Venta\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Venta\\Create.cshtml",
+              "ToolTip": "C:\\Users\\CampusFP\\Desktop\\SupermercadoCRUD2\\SupermercadoCRUD2\\Views\\Venta\\Create.cshtml",
+              "RelativeToolTip": "Views\\Venta\\Create.cshtml",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAACgAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-12T09:17:53.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\CampusFP\\Desktop\\SupermercadoCRUD2\\SupermercadoCRUD2\\Views\\Venta\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Venta\\Index.cshtml",
+              "ToolTip": "C:\\Users\\CampusFP\\Desktop\\SupermercadoCRUD2\\SupermercadoCRUD2\\Views\\Venta\\Index.cshtml",
+              "RelativeToolTip": "Views\\Venta\\Index.cshtml",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAgwAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-12T09:17:45.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VentaController.cs",
+              "DocumentMoniker": "C:\\Users\\CampusFP\\Desktop\\SupermercadoCRUD2\\SupermercadoCRUD2\\Controllers\\VentaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\VentaController.cs",
+              "ToolTip": "C:\\Users\\CampusFP\\Desktop\\SupermercadoCRUD2\\SupermercadoCRUD2\\Controllers\\VentaController.cs",
+              "RelativeToolTip": "Controllers\\VentaController.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T09:17:29.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VentaService.cs",
+              "DocumentMoniker": "C:\\Users\\CampusFP\\Desktop\\SupermercadoCRUD2\\SupermercadoCRUD2\\servicios\\VentaService.cs",
+              "RelativeDocumentMoniker": "servicios\\VentaService.cs",
+              "ToolTip": "C:\\Users\\CampusFP\\Desktop\\SupermercadoCRUD2\\SupermercadoCRUD2\\servicios\\VentaService.cs",
+              "RelativeToolTip": "servicios\\VentaService.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAASwFkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T09:17:04.05Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IVentaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\CampusFP\\Desktop\\SupermercadoCRUD2\\SupermercadoCRUD2\\Data\\Repositorios\\IVentaRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repositorios\\IVentaRepository.cs",
+              "ToolTip": "C:\\Users\\CampusFP\\Desktop\\SupermercadoCRUD2\\SupermercadoCRUD2\\Data\\Repositorios\\IVentaRepository.cs",
+              "RelativeToolTip": "Data\\Repositorios\\IVentaRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T09:11:55.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "VentaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\CampusFP\\Desktop\\SupermercadoCRUD2\\SupermercadoCRUD2\\Data\\Repositorios\\VentaRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repositorios\\VentaRepository.cs",
+              "ToolTip": "C:\\Users\\CampusFP\\Desktop\\SupermercadoCRUD2\\SupermercadoCRUD2\\Data\\Repositorios\\VentaRepository.cs",
+              "RelativeToolTip": "Data\\Repositorios\\VentaRepository.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T09:10:59.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "VentaDTO.cs",
+              "DocumentMoniker": "C:\\Users\\CampusFP\\Desktop\\SupermercadoCRUD2\\SupermercadoCRUD2\\Models\\Dto\\VentaDTO.cs",
+              "RelativeDocumentMoniker": "Models\\Dto\\VentaDTO.cs",
+              "ToolTip": "C:\\Users\\CampusFP\\Desktop\\SupermercadoCRUD2\\SupermercadoCRUD2\\Models\\Dto\\VentaDTO.cs",
+              "RelativeToolTip": "Models\\Dto\\VentaDTO.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAUwAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T09:07:44.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Venta.cs",
+              "DocumentMoniker": "C:\\Users\\CampusFP\\Desktop\\SupermercadoCRUD2\\SupermercadoCRUD2\\Models\\Entity\\Venta.cs",
+              "RelativeDocumentMoniker": "Models\\Entity\\Venta.cs",
+              "ToolTip": "C:\\Users\\CampusFP\\Desktop\\SupermercadoCRUD2\\SupermercadoCRUD2\\Models\\Entity\\Venta.cs",
+              "RelativeToolTip": "Models\\Entity\\Venta.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswAkAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T09:05:28.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "VentaContext.cs",
+              "DocumentMoniker": "C:\\Users\\CampusFP\\Desktop\\SupermercadoCRUD2\\SupermercadoCRUD2\\Data\\VentaContext.cs",
+              "RelativeDocumentMoniker": "Data\\VentaContext.cs",
+              "ToolTip": "C:\\Users\\CampusFP\\Desktop\\SupermercadoCRUD2\\SupermercadoCRUD2\\Data\\VentaContext.cs",
+              "RelativeToolTip": "Data\\VentaContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T08:46:21.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\CampusFP\\Desktop\\SupermercadoCRUD2\\SupermercadoCRUD2\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\CampusFP\\Desktop\\SupermercadoCRUD2\\SupermercadoCRUD2\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-12T08:09:12.485Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

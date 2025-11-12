@@ -1,0 +1,88 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Examen_DEWES_JuanJose_acebedo_lara2.Models.Dto;
+using Examen_DEWES_JuanJose_acebedo_lara2.Servicios;
+
+namespace Examen_DEWES_JuanJose_acebedo_lara.Controllers
+{
+    public class VentaController : Controller
+    {
+        private readonly VentaService _servicio;
+
+        public VentaController(VentaService servicio)
+        {
+            _servicio = servicio;
+        }
+
+        // ---- INDEX ----
+        public IActionResult Index(string filtro)
+        {
+            List<VentaDTO> ventas;
+
+            if (!string.IsNullOrEmpty(filtro))
+            {
+                ventas = _servicio.ListarPorProducto(filtro);
+            }
+            else
+            {
+                ventas = _servicio.Listar();
+            }
+
+            ViewBag.Productos = _servicio.ObtenerProductos();
+            ViewBag.FiltroActual = filtro;
+
+            return View(ventas);
+        }
+
+        // ---- CREATE GET ----
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        // ---- CREATE POST ----
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(VentaDTO dto)
+        {
+            if (ModelState.IsValid)
+            {
+                var resultado = _servicio.Crear(dto);
+
+                if (resultado.exito)
+                {
+                    TempData["Mensaje"] = resultado.mensaje;
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    TempData["Error"] = resultado.mensaje;
+                }
+            }
+
+            return View(dto);
+        }
+
+        // ---- DELETE GET ----
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            var venta = _servicio.ObtenerPorId(id);
+            if (venta == null)
+            {
+                return NotFound();
+            }
+            return View(venta);
+        }
+
+        // ---- DELETE POST ----
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            _servicio.Eliminar(id);
+            TempData["Mensaje"] = "Venta eliminada correctamente";
+            return RedirectToAction("Index");
+        }
+    }
+}

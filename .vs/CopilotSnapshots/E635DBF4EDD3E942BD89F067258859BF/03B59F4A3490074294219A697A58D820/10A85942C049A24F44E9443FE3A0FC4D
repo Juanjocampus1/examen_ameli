@@ -1,0 +1,42 @@
+﻿using Examen_DEWES_JuanJose_acebedo_lara.Data;
+using Examen_DEWES_JuanJose_acebedo_lara2.Models.Entity;
+
+namespace Examen_DEWES_JuanJose_acebedo_lara2.Data.Repositorios
+{
+    public class VentaRepository : IVentaRepository
+    {
+        private readonly VentaContext _contexto;
+
+        public VentaRepository(VentaContext contexto)
+        {
+            _contexto = contexto;
+        }
+
+        public List<Venta> Listar()
+        {
+            return _contexto.Productos.ToList();
+        }
+
+        public List<Venta> ListarPorProducto(string producto)
+        {
+            return _contexto.Productos.Where(v => v.Producto == producto).ToList();
+        }
+
+        public Venta? ObtenerPorId(int id)
+        {
+            return _contexto.Productos.FirstOrDefault(v => v.Id_venta == id);
+        }
+
+        public void Crear(Venta venta)
+        {
+            _contexto.Productos.Add(venta);
+            _contexto.SaveChanges();
+        }
+
+        public int ObtenerStockPorProducto(string producto)
+        {
+            var ventas = _contexto.Productos.Where(v => v.Producto == producto).ToList();
+            return ventas.Sum(v => v.Cantidad);
+        }
+    }
+}

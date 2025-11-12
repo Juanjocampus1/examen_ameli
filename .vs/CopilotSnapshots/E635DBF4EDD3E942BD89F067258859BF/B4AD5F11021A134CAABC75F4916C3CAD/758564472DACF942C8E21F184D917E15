@@ -1,0 +1,78 @@
+﻿@model List<Examen_DEWES_JuanJose_acebedo_lara2.Models.Dto.VentaDTO>
+
+@{
+    ViewData["Title"] = "Ventas";
+}
+
+<h2>Listado de Ventas</h2>
+
+<div>
+    <a href="@Url.Action("Create")">Añadir Nueva Venta</a>
+</div>
+
+<div>
+    <form method="get" action="@Url.Action("Index")">
+   <label>Filtrar por producto:</label>
+        <select name="filtro">
+       <option value="">Todos</option>
+          @foreach (var producto in ViewBag.Productos)
+            {
+     @if (producto == ViewBag.FiltroActual)
+    {
+     <option value="@producto" selected>@producto</option>
+            }
+     else
+             {
+      <option value="@producto">@producto</option>
+                }
+          }
+        </select>
+        <button type="submit">Filtrar</button>
+     @if (!string.IsNullOrEmpty(ViewBag.FiltroActual))
+    {
+            <a href="@Url.Action("Index")">Limpiar filtro</a>
+        }
+ </form>
+</div>
+
+@if (TempData["Mensaje"] != null)
+{
+    <div>
+        @TempData["Mensaje"]
+    </div>
+}
+
+@if (TempData["Error"] != null)
+{
+  <div>
+  @TempData["Error"]
+  </div>
+}
+
+<table border="1">
+    <thead>
+        <tr>
+  <th>ID</th>
+   <th>Producto</th>
+ <th>Cantidad</th>
+  <th>Precio</th>
+  <th>Subtotal</th>
+            <th>Acciones</th>
+   </tr>
+    </thead>
+    <tbody>
+ @foreach (var venta in Model)
+        {
+    <tr>
+       <td>@venta.Id_venta</td>
+     <td>@venta.Producto</td>
+              <td>@venta.Cantidad</td>
+    <td>@venta.Precio €</td>
+    <td>@venta.Subtotal €</td>
+   <td>
+         <a href="@Url.Action("Delete", new { id = venta.Id_venta })">Eliminar</a>
+            </td>
+            </tr>
+     }
+    </tbody>
+</table>

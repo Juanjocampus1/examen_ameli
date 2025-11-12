@@ -1,0 +1,38 @@
+@model Examen_DEWES_JuanJose_acebedo_lara2.Models.Dto.VentaDTO
+
+@{
+    ViewData["Title"] = "Eliminar Venta";
+}
+
+<h2>Eliminar Venta</h2>
+
+<p>¿Está seguro de que desea eliminar esta venta?</p>
+
+<table border="1">
+    <tr>
+        <td>ID</td>
+        <td>@Model.Id_venta</td>
+    </tr>
+    <tr>
+        <td>Producto</td>
+        <td>@Model.Producto</td>
+    </tr>
+    <tr>
+        <td>Cantidad</td>
+        <td>@Model.Cantidad</td>
+    </tr>
+    <tr>
+     <td>Precio</td>
+        <td>@Model.Precio €</td>
+    </tr>
+    <tr>
+        <td>Subtotal</td>
+ <td>@Model.Subtotal €</td>
+    </tr>
+</table>
+
+<form method="post" action="@Url.Action("DeleteConfirmed", new { id = Model.Id_venta })">
+    @Html.AntiForgeryToken()
+    <button type="submit">Eliminar</button>
+    <a href="@Url.Action("Index")">Cancelar</a>
+</form>

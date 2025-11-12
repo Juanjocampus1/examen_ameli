@@ -1,0 +1,82 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Examen_DEWES_JuanJose_acebedo_lara.Data;
+using Examen_DEWES_JuanJose_acebedo_lara2.Models.Entity;
+
+namespace Examen_DEWES_JuanJose_acebedo_lara2.Data.Repositorios
+{
+    public class VentaRepository : IVentaRepository
+    {
+        private readonly VentaContext _contexto;
+
+        public VentaRepository(VentaContext contexto)
+        {
+            _contexto = contexto;
+        }
+
+        public List<Venta> Listar()
+        {
+            return _contexto.Productos
+                .Include(p => p.)
+                .ToList();
+        }
+
+        public List<Venta> ListarPorProducto(string producto)
+        {
+            return _contexto.Productos.Where(v => v.Producto == producto).ToList();
+        }
+
+        public Venta? ObtenerPorId(int id)
+        {
+            return _contexto.Productos.FirstOrDefault(v => v.Id_venta == id);
+        }
+
+        public void Crear(Venta venta)
+        {
+            _contexto.Productos.Add(venta);
+            _contexto.SaveChanges();
+        }
+
+        public void Editar(Venta producto)
+        {
+            var existente = _contexto.Productos.Find(producto.IdProducto);
+
+            if (existente == null) return;
+
+            existente.Nombre = producto.Nombre;
+            existente.Medida = producto.Medida;
+            existente.Precio = producto.Precio;
+            existente.Stock = producto.Stock;
+            existente.IdCategoria = producto.IdCategoria;
+
+            _contexto.SaveChanges();
+        }
+
+        public void Eliminar(int id)
+        {
+            var producto = _contexto.Productos.Find(id);
+            if (producto == null) return;
+
+            _contexto.Productos.Remove(producto);
+            _contexto.SaveChanges();
+        }
+
+        public int ObtenerUltimoId()
+        {
+            if (!_contexto.Productos.Any())
+                return 0;
+
+            return _contexto.Productos.Max(p => p.IdProducto);
+        }
+
+        public List<Categoria> ListarCategorias()
+        {
+            return _contexto.Categorias.ToList();
+        }
+
+        public int ObtenerStockPorProducto(string producto)
+        {
+            var ventas = _contexto.Productos.Where(v => v.Producto == producto).ToList();
+            return ventas.Sum(v => v.Cantidad);
+        }
+    }
+}

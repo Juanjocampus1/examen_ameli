@@ -1,0 +1,14 @@
+﻿using Examen_DEWES_JuanJose_acebedo_lara2.Models.Entity;
+
+namespace Examen_DEWES_JuanJose_acebedo_lara2.Data.Repositorios
+{
+    public interface IVentaRepository
+    {
+        List<Venta> Listar();
+        List<Venta> ListarPorProducto(string producto);
+        Venta? ObtenerPorId(int id);
+        void Crear(Venta venta);
+        int ObtenerStockPorProducto(string producto);
+    }
+}
+

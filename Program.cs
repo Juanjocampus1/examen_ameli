@@ -1,0 +1,49 @@
+using Microsoft.EntityFrameworkCore;
+using Examen_DEWES_JuanJose_acebedo_lara.Data;
+using Examen_DEWES_JuanJose_acebedo_lara2.Data.Repositorios;
+using Examen_DEWES_JuanJose_acebedo_lara2.Servicios;
+
+namespace Examen_DEWES_JuanJose_acebedo_lara
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var builder = WebApplication.CreateBuilder(args);
+
+            // Add services to the container.
+            builder.Services.AddControllersWithViews();
+
+            string cadena = builder.Configuration.GetConnectionString("DefaultConnection")
+       ?? "Server=localhost;Database=VENTAS;Uid=root;Pwd=curso;";
+
+            builder.Services.AddDbContext<VentaContext>(op =>
+            {
+                op.UseMySql(cadena, ServerVersion.AutoDetect(cadena));
+            });
+
+            builder.Services.AddScoped<IVentaRepository, VentaRepository>();
+            builder.Services.AddScoped<VentaService>();
+
+            var app = builder.Build();
+
+            // Configure the HTTP request pipeline.
+            if (!app.Environment.IsDevelopment())
+            {
+                app.UseExceptionHandler("/Home/Error");
+                app.UseHsts();
+            }
+
+            app.UseHttpsRedirection();
+            app.UseStaticFiles();
+            app.UseRouting();
+            app.UseAuthorization();
+
+            app.MapControllerRoute(
+           name: "default",
+           pattern: "{controller=Venta}/{action=Index}/{id?}");
+
+            app.Run();
+        }
+    }
+}

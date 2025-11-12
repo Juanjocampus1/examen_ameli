@@ -1,0 +1,41 @@
+﻿@model Examen_DEWES_JuanJose_acebedo_lara2.Models.Dto.VentaDTO
+
+@{
+    ViewData["Title"] = "Nueva Venta";
+}
+
+<h2>Registrar Nueva Venta</h2>
+
+@if (TempData["Error"] != null)
+{
+    <div style="padding: 10px; background: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; margin-bottom: 15px;">
+        @TempData["Error"]
+    </div>
+}
+
+<form method="post" action="@Url.Action("Create")">
+    @Html.AntiForgeryToken()
+    
+    <div style="margin-bottom: 15px;">
+        <label>Producto:</label><br />
+        <input type="text" name="Producto" value="@Model?.Producto" required style="padding: 8px; width: 300px;" />
+        <span style="color: red;">@Html.ValidationMessageFor(m => m.Producto)</span>
+    </div>
+
+    <div style="margin-bottom: 15px;">
+        <label>Cantidad:</label><br />
+        <input type="number" name="Cantidad" value="@Model?.Cantidad" required min="1" style="padding: 8px; width: 300px;" />
+        <span style="color: red;">@Html.ValidationMessageFor(m => m.Cantidad)</span>
+    </div>
+
+    <div style="margin-bottom: 15px;">
+        <label>Precio:</label><br />
+        <input type="number" name="Precio" value="@Model?.Precio" required step="0.01" min="0.01" style="padding: 8px; width: 300px;" />
+        <span style="color: red;">@Html.ValidationMessageFor(m => m.Precio)</span>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <button type="submit" style="padding: 8px 20px; background: #28a745; color: white; border: none; border-radius: 3px; cursor: pointer;">Guardar</button>
+        <a href="@Url.Action("Index")" style="padding: 8px 20px; background: #6c757d; color: white; text-decoration: none; border-radius: 3px; margin-left: 10px;">Cancelar</a>
+    </div>
+</form>
